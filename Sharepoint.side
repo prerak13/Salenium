@@ -1,0 +1,149 @@
+{
+  "id": "109c6ef5-dc59-45ba-9836-1b749c3baab8",
+  "version": "2.0",
+  "name": "Sharepoint",
+  "url": "https://www.office.com",
+  "tests": [{
+    "id": "3e2886ae-45e4-4bed-911b-a6f565058acb",
+    "name": "1",
+    "commands": [{
+      "id": "7289702d-5f54-46c1-acc8-aeb179c43126",
+      "comment": "",
+      "command": "open",
+      "target": "/?auth=2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82be2e24-7aca-4e5f-a076-343e3f977132",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "568578c2-9074-4dc8-af56-ca8ab5d764c3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ms-ohp-Icon--excelLogo",
+      "targets": [
+        ["css=.ms-ohp-Icon--excelLogo", "css:finder"],
+        ["xpath=(//span[@id=''])[6]", "xpath:attributes"],
+        ["xpath=//a[@id='ShellExcelOnline_link']/span/ohp-icon-font/span", "xpath:idRelative"],
+        ["xpath=//div[5]/ohp-app-tile/div/a/span/ohp-icon-font/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a5c5d34-962c-48a4-ab6e-0a29bd07689f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.ms-ohp-Icon--excelLogo",
+      "targets": [
+        ["css=.ms-ohp-Icon--excelLogo", "css:finder"],
+        ["xpath=(//span[@id=''])[6]", "xpath:attributes"],
+        ["xpath=//a[@id='ShellExcelOnline_link']/span/ohp-icon-font/span", "xpath:idRelative"],
+        ["xpath=//div[5]/ohp-app-tile/div/a/span/ohp-icon-font/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd37bd95-61b3-4427-bd66-bd6fe37dfee2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ms-ohp-Icon--sharepointLogo",
+      "targets": [
+        ["css=.ms-ohp-Icon--sharepointLogo", "css:finder"],
+        ["xpath=(//span[@id=''])[9]", "xpath:attributes"],
+        ["xpath=//a[@id='ShellSites_link']/span/ohp-icon-font/span", "xpath:idRelative"],
+        ["xpath=//div[8]/ohp-app-tile/div/a/span/ohp-icon-font/span", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6559",
+      "windowTimeout": 2000
+    }, {
+      "id": "c3315d8d-d70f-4e51-aa8f-84035dabf4db",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win6559}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc58d341-c122-4bab-950f-0f324b2247ac",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.CardFocusZone:nth-child(3) .ContainerCard-bannerImage",
+      "targets": [
+        ["css=.CardFocusZone:nth-child(3) .ContainerCard-bannerImage", "css:finder"],
+        ["xpath=//div[@id='homeContentView']/div/div[2]/div/div[2]/div/div[3]/div/div/a/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0bdb852-edec-4203-a8f9-4758708370d8",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.CardFocusZone:nth-child(3) > .ContainerCard-withActivities .ContainerCard-bannerImage",
+      "targets": [
+        ["css=.CardFocusZone:nth-child(3) > .ContainerCard-withActivities .ContainerCard-bannerImage", "css:finder"],
+        ["xpath=//div[@id='homeContentView']/div/div[2]/div/div[2]/div/div[3]/div/div/a/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3112db5e-90b9-49b6-813b-9f5ea889e2f6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.CardFocusZone:nth-child(3) > .ContainerCard-withActivities .ContainerCard-header",
+      "targets": [
+        ["css=.CardFocusZone:nth-child(3) > .ContainerCard-withActivities .ContainerCard-header", "css:finder"],
+        ["xpath=//div[@id='homeContentView']/div/div[2]/div/div[2]/div/div[3]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://rajaniket.sharepoint.com/sites/prerak-use')])[5]", "xpath:href"],
+        ["xpath=//div[3]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfe4e78f-1872-41a7-9b40-1bb3b916ed9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.CardFocusZone:nth-child(3) > .ContainerCard-withActivities .ContainerCard-header",
+      "targets": [
+        ["css=.CardFocusZone:nth-child(3) > .ContainerCard-withActivities .ContainerCard-header", "css:finder"],
+        ["xpath=//div[@id='homeContentView']/div/div[2]/div/div[2]/div/div[3]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://rajaniket.sharepoint.com/sites/prerak-use')])[5]", "xpath:href"],
+        ["xpath=//div[3]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a6c4537-5fdd-41df-b512-a8632901dbbb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ms-Nav-navItem:nth-child(6) .ms-Nav-linkText",
+      "targets": [
+        ["css=.ms-Nav-navItem:nth-child(6) .ms-Nav-linkText", "css:finder"],
+        ["xpath=//div[@id='spPageChromeAppDiv']/div[2]/div[3]/div/div[2]/nav/div/div/ul/li[6]/div/a/span/div", "xpath:idRelative"],
+        ["xpath=//li[6]/div/a/span/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6eaf6600-d06e-4017-97b1-b0fbbd9a7458",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ms-Nav-navItem:nth-child(6) .ms-Nav-linkText",
+      "targets": [
+        ["css=.ms-Nav-navItem:nth-child(6) .ms-Nav-linkText", "css:finder"],
+        ["xpath=//div[@id='spPageChromeAppDiv']/div[2]/div[3]/div/div[2]/nav/div/div/ul/li[6]/div/a/span/div", "xpath:idRelative"],
+        ["xpath=//li[6]/div/a/span/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "82d3c5a2-5d06-4060-846c-6c0f032a8f5d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3e2886ae-45e4-4bed-911b-a6f565058acb"]
+  }],
+  "urls": ["https://www.office.com/"],
+  "plugins": []
+}
