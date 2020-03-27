@@ -11,6 +11,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
 
 
 class Test1():
@@ -21,31 +22,44 @@ class Test1():
     def teardown_method(self, method):
         self.driver.quit()
 
-    def test_1(self):
+    def LoginToOffice(self):
         self.driver.get("https://www.office.com/")
         self.driver.set_window_size(1295, 695)
         self.driver.find_element(
             By.ID, "hero-banner-sign-in-to-office-365-link").click()
 
         self.driver.find_element(By.ID, "i0116").send_keys(
-            "EMAIL HERE")
+            "Prerak@rajaniket.onmicrosoft.com")
         self.driver.find_element(By.ID, "idSIButton9").click()
-        element = WebDriverWait(self.driver, 10)
-        self.driver.find_element(By.ID, "i0118").send_keys("PASSWORD HERE")
-        element.until(
-            EC.invisibility_of_element_located((By.XPATH,
-                                                "//div[@class='lightbox-cover']"))
-        )
+        time.sleep(2)
+        self.driver.find_element(By.ID, "i0118").send_keys("Sharepoint@")
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable((By.ID,
+                                        "idSIButton9"))
+        ).click()
 
-        self.driver.implicitly_wait(5)
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable((By.ID,
+                                        "idSIButton9"))
+        ).click()
 
-        self.driver.find_element(By.ID, "idSIButton9").click()
-        element = self.driver.find_element(
-            By.ID, "activity-description-div-012BLMK7THXEICLAMYHFB36ZDPXIEJIC4A")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
+    def ScrapPage(self):
+        self.driver.get("https://rajaniket.sharepoint.com/sites/prerak-use")
+        self.driver.set_window_size(1295, 695)
+        whole_page = BeautifulSoup(self.driver.page_source, 'html.parser')
+       # print(whole_page)
+        list_of_values = whole_page.find_elements_by_class_name(
+            "ms-Nav-linkText linkText-49")
+
+        print(list_of_values)
+        return list_of_values
 
 
 x = Test1()
 x.setup_method()
-x.test_1()
+x.LoginToOffice()
+y = x.ScrapPage()
+z = []
+for x in y:
+    z.append(x.text)
+print(y)
